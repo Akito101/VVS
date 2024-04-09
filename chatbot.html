@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot - Selected Major</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Unique styling for the full-screen chatbot interface */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(120deg, #2980b9, #2c3e50);
+            color: #fff;
+        }
+
+        .chatbot-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Move content to the top and bottom */
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            height: 94.5vh; /* Full height of the viewport */
+        }
+
+        .chatbot-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .chatbot-title {
+            font-size: 36px; /* Larger font size for the title */
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 10px;
+            background: linear-gradient(120deg, #3b97e1, #2980b9); /* Gradient background */
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            animation: pulse 1.5s infinite alternate; /* Pulse animation */
+        }
+
+            .chatbot-title span {
+                color: #ffcc00;
+            }
+
+        .chatbot-content {
+            text-align: center;
+            margin-top: 20px;
+            width: 100%; /* Full width for content */
+        }
+
+        #chatbot-messages {
+            max-height: 60vh; /* Adjusted height for chat messages */
+            overflow-y: auto;
+            margin-bottom: 10px;
+            width: 100%; /* Full width for messages */
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        #user-input-container {
+            width: 100%; /* Full width for input field and button container */
+            display: flex;
+            justify-content: space-between; /* Space input and button apart */
+        }
+
+        #user-input {
+            width: calc(100% - 80px); /* Full width for input field */
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        #send-button {
+            width: 80px; /* Fixed width for send button */
+            background-color: #3b97e1;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+            #send-button:hover {
+                background-color: #2980b9;
+            }
+
+        .prompt-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            width: 100%; /* Full width for prompt buttons */
+            margin-top: 20px;
+        }
+
+        .prompt-button {
+            padding: 20px 40px; /* Larger padding for suggested prompts */
+            background-color: #fff;
+            color: #2980b9;
+            border: 4px solid #3b97e1;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 18px; /* Larger font size for suggested prompts */
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+            .prompt-button:hover {
+                background-color: #3b97e1;
+                color: #fff;
+            }
+
+        /* Animation for title */
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="chatbot-container">
+        <header class="chatbot-header">
+            <h1 class="chatbot-title">Chatbot for <span>ICT</span></h1>
+        </header>
+        <div class="chatbot-content">
+            <!-- Chatbot messages will be displayed here -->
+            <div id="chatbot-messages"></div>
+            <div class="prompt-buttons">
+                <button class="prompt-button">About this Faculty</button>
+                <button class="prompt-button">Schedule</button>
+                <button class="prompt-button">Subject Informations</button>
+                <button class="prompt-button">Lecturer Information</button>
+                <button class="prompt-button">Request Assistance</button>
+                <!-- Add more suggested prompts as needed -->
+            </div>
+        </div>
+        <div id="user-input-container">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
