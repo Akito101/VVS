@@ -141,6 +141,42 @@
                 transform: scale(1.05);
             }
         }
+        @media only screen and (max-width: 768px) {
+            /* Adjustments for smaller screens */
+            .chatbot-container {
+                padding: 10px; /* Reduce padding for smaller screens */
+                height: auto; /* Remove fixed height */
+            }
+
+            .chatbot-title {
+                font-size: 24px; /* Decrease font size for the title */
+                padding: 8px; /* Reduce padding for the title */
+            }
+
+            .chatbot-content {
+                margin-top: 10px; /* Adjust top margin */
+            }
+
+            .prompt-buttons {
+                flex-direction: column; /* Stack prompt buttons vertically */
+                align-items: center; /* Center-align prompt buttons */
+            }
+
+            .prompt-button {
+                padding: 15px 30px; /* Adjust padding for smaller screens */
+                font-size: 16px; /* Decrease font size for prompt buttons */
+                margin: 10px 0; /* Add margin between prompt buttons */
+            }
+
+            #user-input-container {
+                flex-direction: column; /* Stack input and button vertically */
+            }
+
+            #user-input {
+                width: 100%; /* Full width for input field */
+                margin-bottom: 10px; /* Add space below input field */
+            }
+        }
     </style>
 </head>
 <body>
