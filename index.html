@@ -28,17 +28,14 @@
             border: 2px solid #3b97e1;
             transition: background-color 0.3s ease;
             align-items: center; /* Align items vertically */
-           
         }
-
-            
 
             .navbar ul {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
                 display: flex;
-                 /* Align items vertically */
+                /* Align items vertically */
             }
 
             .navbar li {
@@ -67,7 +64,7 @@
             padding: 5px 10px;
             border-radius: 2px;
             transition: background-color 0.3s ease;
-            margin-right:5px;
+            margin-right: 5px;
         }
 
             .more-button:hover {
@@ -109,6 +106,7 @@
             .chatbot-title span {
                 color: #ffcc00;
             }
+
 
         .chatbot-content {
             text-align: center;
@@ -164,6 +162,7 @@
                 transform: translateY(0);
             }
         }
+
         .footer {
             background-color: #3b97e1;
             color: white;
@@ -225,11 +224,15 @@
             var arrow = document.querySelector(".arrow");
 
             if (set1.style.display !== "none") {
+                set1.style.transition = "all 0.5s ease"; // Adjust the transition duration here
                 set1.style.display = "none";
+                set2.style.transition = "all 0.5s ease"; // Adjust the transition duration here
                 set2.style.display = "block";
                 arrow.innerHTML = "&#9664;"; // Change arrow direction to backward
             } else {
+                set1.style.transition = "all 0.5s ease"; // Adjust the transition duration here
                 set1.style.display = "block";
+                set2.style.transition = "all 0.5s ease"; // Adjust the transition duration here
                 set2.style.display = "none";
                 arrow.innerHTML = "&#9654;"; // Change arrow direction to forward
             }
