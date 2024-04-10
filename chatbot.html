@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -102,16 +102,28 @@
             margin-top: 20px;
         }
 
+        .prompt {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         .prompt-button {
             padding: 20px 40px; /* Larger padding for suggested prompts */
             background-color: #fff;
             color: #2980b9;
             border: 4px solid #3b97e1;
-            border-radius: 20px;
+            border-radius: 15px;
             cursor: pointer;
             font-size: 18px; /* Larger font size for suggested prompts */
-            transition: all 0.3s ease;
+            transition: all 0.5s ease;
             font-weight: bold;
+        }
+
+        .prompt-description {
+            font-size: 14px; /* Smaller font size for descriptions */
+            opacity: 0.7; /* Make the text more transparent */
+            margin-top: 5px; /* Adjust spacing between button and description */
         }
 
             .prompt-button:hover {
@@ -140,13 +152,51 @@
             <!-- Chatbot messages will be displayed here -->
             <div id="chatbot-messages"></div>
             <div class="prompt-buttons">
-                <button class="prompt-button">About this Faculty</button>
-                <button class="prompt-button">Schedule</button>
-                <button class="prompt-button">Subject Informations</button>
-                <button class="prompt-button">Lecturer Information</button>
-                <button class="prompt-button">Request Assistance</button>
-                <!-- Add more suggested prompts as needed -->
+                <div class="prompt">
+                    <button class="prompt-button">
+                        About this Faculty
+                        <p class="prompt-description">Learn more about the ICT faculty.</p>
+                    </button>
+
+                </div>
+                <div class="prompt">
+                    <button class="prompt-button">
+                        Schedule
+                        <p class="prompt-description">View the available schedule for classes for this semester.</p>
+                    </button>
+
+                </div>
+
+                <div class="prompt">
+                    <button class="prompt-button">
+                        Subject Informations
+                        <p class="prompt-description">Get information about the subjects in the ICT program.</p>
+                </div>
+                </button>
+
+                <div class="prompt">
+                    <button class="prompt-button">
+                        Lecturer Information
+                        <p class="prompt-description">Find out about the lecturers in the ICT department.</p>
+                </div>
+                </button>
+
+                <div class="prompt">
+                    <button class="prompt-button">
+                        Further Oppurtunities
+                        <p class="prompt-description">Oppurtinities after graduating with ICT.</p>
+                </div>
+                </button>
+
+                <div class="prompt">
+                    <button class="prompt-button">
+                        Request Assistance
+                        <p class="prompt-description">Need help? Request assistance from faculty members.</p>
+                </div>
+                </button>
+
             </div>
+
         </div>
         <div id="user-input-container">
             <input type="text" id="user-input" placeholder="Type your message...">
