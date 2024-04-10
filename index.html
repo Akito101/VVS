@@ -173,6 +173,79 @@
             bottom: 0;
             width: 100%;
         }
+
+        @media only screen and (max-width: 768px) {
+            /* Adjustments for smaller screens */
+            .chat-prompts {
+                flex-direction: column;
+            }
+
+            .prompt-button {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            /* Adjustments for phones */
+            .navbar ul {
+                display: none;
+            }
+
+            .navbar {
+                justify-content: center;
+            }
+
+            .more-button {
+                margin-right: 0;
+            }
+
+            .chatbot-container {
+                height: 70vh;
+            }
+
+            .chatbot-title {
+                font-size: 30px;
+            }
+
+            .prompt-button {
+                font-size: 16px;
+                margin: 5px;
+            }
+
+            .arrow {
+                font-size: 24px;
+            }
+        }
+
+        @media only screen and (max-width: 375px) {
+            /* Further adjustments for phones */
+            .chatbot-title {
+                font-size: 24px;
+            }
+
+            .prompt-button {
+                font-size: 14px;
+            }
+
+            .arrow {
+                font-size: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 320px) {
+            /* Additional adjustments for smaller phones */
+            .chatbot-title {
+                font-size: 20px;
+            }
+
+            .prompt-button {
+                font-size: 12px;
+            }
+
+            .arrow {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
